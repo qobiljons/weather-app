@@ -1,2 +1,29 @@
-# weather-app
-The Weather Comparison App is an online application that lets you compare the current weather and 5-day predictions for two cities. This app, built using Django, Bootstrap, and the OpenWeatherMap API, offers a sleek and modern interface for weather comparison.
+# Weather Comparison App
+
+The Weather Comparison App is an online application that allows users to compare the current weather conditions and 5-day forecasts for two cities. Built using Django, Bootstrap, and the OpenWeatherMap API, this app provides a user-friendly interface for quickly accessing and comparing weather data.
+
+## Features
+
+- **City Comparison:** Compare weather data for two cities side-by-side.
+- **Current Weather:** Display current temperature, weather description, and weather icon for each city.
+- **5-Day Forecast:** View a 5-day forecast including minimum and maximum temperatures, weather descriptions, and icons.
+- **Sleek Interface:** Designed with Bootstrap for a modern and responsive layout.
+- **API Integration:** Utilizes the OpenWeatherMap API to fetch real-time weather data.
+
+## Technologies Used
+
+- **Django:**
+- **Bootstrap:** 
+- **OpenWeatherMap API:** 
+- **HTML/CSS:** 
+- **Python:**
+
+## Installation
+
+To run this project locally, follow these steps:
+
+1. **Clone the repository:**
+
+   ```bash
+   git clone <repository_url>
+   cd weather-comparison-app
