@@ -27,17 +27,21 @@ To run this project locally, follow these steps:
    ```bash
    git clone <repository_url>
    cd weather-comparison-app
+   
 # Install Dependencies:
 
-2 **Create and activate a virtual environment (optional but recommended)**
+2. **Create and activate a virtual environment (optional but recommended)**
+ 
+ ```bash
    pipenv install
    pipenv shell
 
-**Set up environment variables**
+3. **Set up environment variables**
 
 # Create a .env file in the root directory with the following variables:
 # Replace <your_openweathermap_api_key> with your actual OpenWeatherMap API key.
 
+```bash
 echo "WEATHER_API_KEY=<your_openweathermap_api_key>" > .env
 SECRET_KEY="YOUR_SECRET_KEY"
 WEATHER_API_KEY=<your_openweathermap_api_key>
