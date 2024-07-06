@@ -1,60 +1,53 @@
 # Weather Comparison App
 
-The Weather Comparison App is an online application that allows users to compare the current weather conditions and 5-day forecasts for two cities. Built using Django, Bootstrap, and the OpenWeatherMap API, this app provides a user-friendly interface for quickly accessing and comparing weather data.
+This Django web application allows users to compare weather data for two cities.
 
 ## Features
 
-- **City Comparison:** Compare weather data for two cities side-by-side.
-- **Current Weather:** Display current temperature, weather description, and weather icon for each city.
-- **5-Day Forecast:** View a 5-day forecast including minimum and maximum temperatures, weather descriptions, and icons.
-- **Sleek Interface:** Designed with Bootstrap for a modern and responsive layout.
-- **API Integration:** Utilizes the OpenWeatherMap API to fetch real-time weather data.
+* **City Comparison:** Compare current weather and 5-day forecasts.
+* **Weather Data:** Displays temperature, description, and icons.
+* **Responsive Design:** Built with Bootstrap for a user-friendly experience.
+* **API Integration:** Utilizes the OpenWeatherMap API.
 
-## Technologies Used
+## Technologies
 
-- **Django:**
-- **Bootstrap:** 
-- **OpenWeatherMap API:** 
-- **HTML/CSS:** 
-- **Python:**
+* Django: Web framework
+* Bootstrap: CSS framework
+* OpenWeatherMap API: Weather data provider
+* Python: Programming language
 
 ## Installation
 
-To run this project locally, follow these steps:
+**Prerequisites:**
 
-1. **Clone the repository:**
+* Git
+* Python 3 and pip
+
+1. **Clone the Repository:**
 
    ```bash
    git clone <repository_url>
    cd weather-comparison-app
-   
-# Install Dependencies:
 
-2. **Create and activate a virtual environment (optional but recommended)**
- 
- ```bash
+2. **Install Dependencies:**
+   ```bash
    pipenv install
-   pipenv shell
+   pipenv shell  # Activate virtual environment (optional)
 
-3. **Set up environment variables**
+3. **Set Up Environment Variables**
+   Create a file named .env in the root directory. Add the following lines, replacing placeholders:
+   ```bash
+   WEATHER_API_KEY=<your_openweathermap_api_key>
+   SECRET_KEY=YOUR_SECRET_KEY   
+Get your API key from OpenWeatherMap.
 
-# Create a .env file in the root directory with the following variables:
-# Replace <your_openweathermap_api_key> with your actual OpenWeatherMap API key.
-
-```bash
-echo "WEATHER_API_KEY=<your_openweathermap_api_key>" > .env
-SECRET_KEY="YOUR_SECRET_KEY"
-WEATHER_API_KEY=<your_openweathermap_api_key>
-
-
-**Run the Development Server**
+4. **Run the development server**
+   ```bash
    python manage.py runserver
 
-#The app will be available at http://localhost:8000.
-
-
-**Usage**
-   # Enter two city names in the provided form fields and click on Compare Weather.
-   # The app will display the current weather details and a 5-day forecast for each city.
-   # Enjoy comparing weather data between different cities effortlessly!
-
+5. **Usage**
+   Visit http://localhost:8000/ in your browser.
+   Enter city names in the form fields.
+   Click "Compare Weather".
+   View weather details and forecasts for both cities.
+   Note: This is a basic setup guide. Additional configuration and development steps might be required.
