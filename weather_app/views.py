@@ -40,7 +40,7 @@ def fetch_weather_data(city, api_key, current_weather_url, forecast_url):
         
         # Extract necessary data from current weather response
         weather_data = {
-            "city": city,
+            "city": city.title(),
             "temperature": round(current_data['main']['temp'] - 271.15, 2),
             "description": current_data["weather"][0]["description"],
             "icon": current_data["weather"][0]["icon"],
@@ -57,19 +57,24 @@ def fetch_weather_data(city, api_key, current_weather_url, forecast_url):
         if forecast_response.status_code == 200:
             forecast_data = forecast_response.json()["list"]
             daily_forecasts = []
+            unique_days = set()
 
             for daily_data in forecast_data:
+                day_name = datetime.datetime.fromtimestamp(daily_data["dt"]).strftime("%A")
+                if day_name in unique_days:
+                    continue
+                unique_days.add(day_name)
                 daily_forecasts.append({
-                    "day": datetime.datetime.fromtimestamp(daily_data["dt"]).strftime("%A"),
-                    "min_temp": round(daily_data["main"]["temp_min"] - 271.15, 2),
-                    "max_temp": round(daily_data["main"]["temp_max"] - 271.15, 2),
+                    "day": day_name,
+                    "min_temp": round(daily_data["main"]["temp_min"] - 273.15, 2),
+                    "max_temp": round(daily_data["main"]["temp_max"] - 273.15, 2),
                     "description": daily_data["weather"][0]["description"],
-
                     "icon": daily_data["weather"][0]["icon"],
                 })
-        
-            
+
+            print(daily_forecasts)
             return weather_data, daily_forecasts
+
         else:
             print(f"Failed to fetch forecast data for {city}. Status code: {forecast_response.status_code}")
             return None, None
