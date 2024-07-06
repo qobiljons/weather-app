@@ -1,20 +1,19 @@
 {% if weather_data %}
-    <div class="card mb-4 shadow-sm weather-card">
-        <div class="card-body text-center">
-            <h2 class="card-title">{{ weather_data.city }}</h2>
-            <p class="card-text">Temperature: {{ weather_data.temperature }} °C</p>
-            <p class="card-text">Description: {{ weather_data.description }}</p>
-            <img src="https://openweathermap.org/img/w/{{ weather_data.icon }}.png" alt="Weather Icon" class="card-img-bottom mx-auto weather-icon">
+    <div class="mb-4 shadow-sm p-4 text-center bg-white rounded">
+        <h2 class="city-name">{{ weather_data.city }}</h2>
+        <div class="weather-icon-container mx-auto mb-2">
+            <img src="https://openweathermap.org/img/w/{{ weather_data.icon }}.png" alt="Weather Icon" class="weather-icon">
         </div>
-        <div class="card-footer text-muted text-center">
-            <h6>Today</h6>
-        </div>
+        <p class="temperature">Temperature: {{ weather_data.temperature }} °C</p>
+        <p class="description">Description: {{ weather_data.description }}</p>
+        <h6 class="text-muted mt-3">Today</h6>
     </div>
 {% endif %}
 
+
 {% if daily_forecasts %}
     <h3 class="mb-4 text-center">5-Day Forecasts</h3>
-    <div class="forecast-container d-flex flex-wrap justify-content-center">
+    <div class="forecast-container d-flex">
         {% for forecast in daily_forecasts %}
             <div class="card mb-3 mx-2 shadow-sm forecast-card">
                 <div class="card-body text-center">

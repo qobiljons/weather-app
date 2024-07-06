@@ -15,20 +15,28 @@
     <div class="container">
         <form method="post" class="p-4 rounded shadow-lg">
             {% csrf_token %}
-            <div class="mb-3">
-                <label for="city1" class="form-label">Enter City 1:</label>
-                <input type="text" class="form-control" id="city1" name="city1" placeholder="E.g., New York">
+            <div class="row g-3 align-items-center">
+                <div class="col-auto">
+                    <label for="city1" class="form-label">Enter City 1:</label>
+                </div>
+                <div class="col-auto">
+                    <input type="text" class="form-control" id="city1" name="city1" placeholder="E.g., New York">
+                </div>
+                <div class="col-auto">
+                    <label for="city2" class="form-label">Enter City 2:</label>
+                </div>
+                <div class="col-auto">
+                    <input type="text" class="form-control" id="city2" name="city2" placeholder="E.g., London">
+                </div>
+                <div class="col-auto">
+                    <button type="submit" class="btn btn-success btn-lg">Compare Weather</button>
+                </div>
             </div>
-            <div class="mb-3">
-                <label for="city2" class="form-label">Enter City 2:</label>
-                <input type="text" class="form-control" id="city2" name="city2" placeholder="E.g., London">
-            </div>
-            <button type="submit" class="btn btn-primary btn-lg btn-block">Compare Weather</button>
         </form>
 
-        <div class="comparison-container mt-5 row justify-content-center">
+        <div class="comparison-container mt-5 row justify-content-center mb-5">
             {% if weather_data1 %}
-                <div class="col-md-6 d-flex justify-content-center">
+                <div class="col-12 d-flex justify-content-center">
                     <div class="city-container text-center">
                         {% include 'weather_app/weather_data.html' with weather_data=weather_data1 daily_forecasts=daily_forecast1 %}
                     </div>
@@ -36,7 +44,7 @@
             {% endif %}
 
             {% if weather_data2 %}
-                <div class="col-md-6 d-flex justify-content-center">
+                <div class="col-12 d-flex justify-content-center">
                     <div class="city-container text-center">
                         {% include 'weather_app/weather_data.html' with weather_data=weather_data2 daily_forecasts=daily_forecast2 %}
                     </div>
