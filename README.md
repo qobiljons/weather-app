@@ -49,5 +49,5 @@ Get your API key from OpenWeatherMap.
    Visit http://localhost:8000/ in your browser.
    Enter city names in the form fields.
    Click "Compare Weather".
-   View weather details and forecasts for both cities.
-   Note: This is a basic setup guide. Additional configuration and development steps might be required.
+View weather details and forecasts for both cities.
+Note: This is a basic setup guide. Additional configuration and development steps might be required.
