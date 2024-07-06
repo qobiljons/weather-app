@@ -38,8 +38,7 @@ This Django web application allows users to compare weather data for two cities.
    Create a file named .env in the root directory. Add the following lines, replacing placeholders:
    ```bash
    WEATHER_API_KEY=<your_openweathermap_api_key>
-   SECRET_KEY=YOUR_SECRET_KEY   
-Get your API key from OpenWeatherMap.
+   SECRET_KEY=YOUR_SECRET_KEY   #Get your API key from OpenWeatherMap.
 
 4. **Run the development server**
    ```bash
@@ -50,4 +49,4 @@ Get your API key from OpenWeatherMap.
    Enter city names in the form fields.
    Click "Compare Weather".
 View weather details and forecasts for both cities.
-Note: This is a basic setup guide. Additional configuration and development steps might be required.
+   #Note: This is a basic setup guide. Additional configuration and development steps might be required.
